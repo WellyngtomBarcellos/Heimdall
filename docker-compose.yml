@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  heimdall:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: heimdall-app
+    ports:
+      - "8009:8009"
+    restart: unless-stopped
